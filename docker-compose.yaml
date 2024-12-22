@@ -1,0 +1,23 @@
+services:
+  service_a:
+    build:
+      context: ./ProductService
+    ports:
+      - "8084:8084"
+    volumes:
+      - ./ProductService:/app/
+    networks:
+      - app-network
+  service_b:
+    build:
+      context: ./ClientService
+    ports:
+      - "8085:8085"
+    volumes:
+      - ./ClientService:/app/
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

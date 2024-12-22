@@ -1,0 +1,33 @@
+version: "3"
+
+server:
+  command: "php public/index.php"
+  env:
+    - APP_RUNTIME: Baldinof\RoadRunnerBundle\Runtime\Runtime
+
+grpc:
+  listen: "tcp://0.0.0.0:8084"
+  proto:
+    - "proto/service.proto"
+
+http:
+  address: 0.0.0.0:8080
+  middleware: [ "static", "gzip" ]
+  pool:
+    debug: true
+  uploads:
+    forbid: [ ".php", ".exe", ".bat" ]
+  static:
+    dir: "public"
+    forbid: [ ".php", ".htaccess" ]
+
+logs:
+  mode: development
+  channels:
+    http:
+      level: debug # Log all http requests, set to info to disable
+    server:
+      level: info # Everything written to worker stderr is logged
+      mode: raw
+    metrics:
+      level: debug
