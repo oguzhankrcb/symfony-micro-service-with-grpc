@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/ab9c2658-a10c-4df4-9191-bf20ebd5d730)
+![image](https://github.com/user-attachments/assets/e4e8ff14-f745-4c3e-a385-cd5689d0934d)
 
 # Symfony Microservice with gRPC
 
