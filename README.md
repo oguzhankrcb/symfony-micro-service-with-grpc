@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/ab9c2658-a10c-4df4-9191-bf20ebd5d730)
+
 # Symfony Microservice with gRPC
 
 This repository contains a Symfony-based microservice architecture leveraging **gRPC** for high-performance communication. The project is structured with multiple services and a robust setup for local development using Docker.
