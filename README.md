@@ -79,6 +79,10 @@ docker exec -it XXXXX(service_b container name) sh
 /app # bin/console app:get_products
 ```
 
+### Or you can get information from controller
+
+Open this URL from your browser: `http://localhost:8085/clients/1234/products`
+
 ### Configuration
 
 - RoadRunner settings can be adjusted in `.rr.yaml`.
